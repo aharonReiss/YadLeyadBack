@@ -1,0 +1,15 @@
+C:\Projects\YadLeyadBack\Domain\bin\Debug\net7.0\Domain.exe
+C:\Projects\YadLeyadBack\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Projects\YadLeyadBack\Domain\bin\Debug\net7.0\Domain.runtimeconfig.json
+C:\Projects\YadLeyadBack\Domain\bin\Debug\net7.0\Domain.dll
+C:\Projects\YadLeyadBack\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Projects\YadLeyadBack\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+C:\Projects\YadLeyadBack\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\YadLeyadBack\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Projects\YadLeyadBack\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Projects\YadLeyadBack\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Projects\YadLeyadBack\Domain\obj\Debug\net7.0\Domain.dll
+C:\Projects\YadLeyadBack\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Projects\YadLeyadBack\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Projects\YadLeyadBack\Domain\obj\Debug\net7.0\Domain.genruntimeconfig.cache
+C:\Projects\YadLeyadBack\Domain\obj\Debug\net7.0\ref\Domain.dll
