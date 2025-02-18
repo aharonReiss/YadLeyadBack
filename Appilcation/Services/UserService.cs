@@ -27,7 +27,7 @@ namespace Appilcation.Services
         {
             try
             {
-                if (!_validationService.IsValidEmail(user.EmailAdress))
+                if (!_validationService.IsValidEmail(user.Email))
                     throw new Exception(SystemMessages.WrongMail);
                 if (!_validationService.IsValidPassword(user.Password))
                     throw new Exception(SystemMessages.WrongPassword);
@@ -37,10 +37,10 @@ namespace Appilcation.Services
                     throw new Exception(SystemMessages.WrongFirstName);
                 if (!_validationService.ThereIsValue(user.LastName))
                     throw new Exception(SystemMessages.WrongLastName);
-                User userFromDb = await _userRepository.GetUserByEmail(user.EmailAdress);
+                User userFromDb = await _userRepository.GetUserByEmail(user.Email);
                 if (userFromDb != null)
                     throw new Exception(SystemMessages.UserAlreadyExist);
-                User newUser = new User() { EmailAdress = user.EmailAdress, FirstName = user.FirstName,LastName = user.LastName, Password = Cryptor.MD5Encrypt(user.Password), Telephone = user.Telephone };
+                User newUser = new User() { EmailAdress = user.Email, FirstName = user.FirstName,LastName = user.LastName, Password = Cryptor.MD5Encrypt(user.Password), Telephone = user.Telephone };
                 return await _userRepository.AddUser(newUser);
             }
             catch (Exception ex)
@@ -61,7 +61,7 @@ namespace Appilcation.Services
 
         public async Task<string> Login(LoginModelRequest user)
         {
-            User userFromDb = await _userRepository.GetUserByEmail(user.EmailAdress);
+            User userFromDb = await _userRepository.GetUserByEmail(user.Email);
             if (userFromDb != null && Cryptor.MD5Encrypt(user.Password) == userFromDb.Password)
             {
                 string token = JwtMethods.GenerateToken(userFromDb.Id.ToString(), _config["Jwt:Issuer"], _config["Jwt:Key"]);
