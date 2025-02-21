@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aYM9srbMCNaO30aE6FeuoXY5g4Rc87DEkiCSEyLBMKuMcdiToKIYZ1A6epmONbpFpQgLjcpvaXuvqznPTR9WYQ==",
+  "dgSpecHash": "lUGD3NYkuWSDMjTcV5YWr4GtYkpp0zo4GieDMsVsBOfkZPBDaF3IsFwpBJdRBii2Sea/rR3lLkWIC1NvVFjPVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Appilcation\\Appilcation.csproj",
+  "projectFilePath": "C:\\Projects\\YadLeyadBack\\Appilcation\\Appilcation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",

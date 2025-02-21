@@ -15,6 +15,13 @@ namespace Infrastructure.Repositories
         public DbSet<Street> Streets { get; set; }
         public DbSet<Neighborhood> Neighborhoods { get; set; }
         public DbSet<StreetToNeighborhood> StreetToNeighborhood { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<NumberOfRooms> NumberOfRooms { get; set; }
+        public DbSet<Property> Properties { get; set; }
+        public DbSet<PropertyDetail> PropertyDetails { get; set; }
+        public DbSet<PhoneNumber> PhoneNumbers { get; set; }
+        public DbSet<Parasha> Parashot { get; set; }
+        public DbSet<PropertyForShabatDetail> PropertyForShabatDetails { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
       : base(options)
         {

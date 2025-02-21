@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\YadLeyadBack\\YadLeyadBack.csproj": {}
+    "C:\\Projects\\YadLeyadBack\\YadLeyadBack\\YadLeyadBack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Appilcation\\Appilcation.csproj": {
+    "C:\\Projects\\YadLeyadBack\\Appilcation\\Appilcation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Appilcation\\Appilcation.csproj",
+        "projectUniqueName": "C:\\Projects\\YadLeyadBack\\Appilcation\\Appilcation.csproj",
         "projectName": "Appilcation",
-        "projectPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Appilcation\\Appilcation.csproj",
+        "projectPath": "C:\\Projects\\YadLeyadBack\\Appilcation\\Appilcation.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Appilcation\\obj\\",
+        "outputPath": "C:\\Projects\\YadLeyadBack\\Appilcation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Domain\\Domain.csproj"
+              "C:\\Projects\\YadLeyadBack\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Projects\\YadLeyadBack\\Domain\\Domain.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Domain\\Domain.csproj": {
+    "C:\\Projects\\YadLeyadBack\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Projects\\YadLeyadBack\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Projects\\YadLeyadBack\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Domain\\obj\\",
+        "outputPath": "C:\\Projects\\YadLeyadBack\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -132,14 +132,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Projects\\YadLeyadBack\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Projects\\YadLeyadBack\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Projects\\YadLeyadBack\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Projects\\YadLeyadBack\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -156,11 +156,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Appilcation\\Appilcation.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Appilcation\\Appilcation.csproj"
+              "C:\\Projects\\YadLeyadBack\\Appilcation\\Appilcation.csproj": {
+                "projectPath": "C:\\Projects\\YadLeyadBack\\Appilcation\\Appilcation.csproj"
               },
-              "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Domain\\Domain.csproj"
+              "C:\\Projects\\YadLeyadBack\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Projects\\YadLeyadBack\\Domain\\Domain.csproj"
               }
             }
           }
@@ -210,14 +210,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\YadLeyadBack\\YadLeyadBack.csproj": {
+    "C:\\Projects\\YadLeyadBack\\YadLeyadBack\\YadLeyadBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\YadLeyadBack\\YadLeyadBack.csproj",
+        "projectUniqueName": "C:\\Projects\\YadLeyadBack\\YadLeyadBack\\YadLeyadBack.csproj",
         "projectName": "YadLeyadBack",
-        "projectPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\YadLeyadBack\\YadLeyadBack.csproj",
+        "projectPath": "C:\\Projects\\YadLeyadBack\\YadLeyadBack\\YadLeyadBack.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\YadLeyadBack\\obj\\",
+        "outputPath": "C:\\Projects\\YadLeyadBack\\YadLeyadBack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -235,11 +235,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Appilcation\\Appilcation.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Appilcation\\Appilcation.csproj"
+              "C:\\Projects\\YadLeyadBack\\Appilcation\\Appilcation.csproj": {
+                "projectPath": "C:\\Projects\\YadLeyadBack\\Appilcation\\Appilcation.csproj"
               },
-              "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\checkkk\\YadLeyadBack\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Projects\\YadLeyadBack\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Projects\\YadLeyadBack\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
