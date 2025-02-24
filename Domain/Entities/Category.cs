@@ -13,7 +13,7 @@ namespace Domain.Entities
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
         public DateTime? StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public bool IsEnable { get; set; }
     }
 }
