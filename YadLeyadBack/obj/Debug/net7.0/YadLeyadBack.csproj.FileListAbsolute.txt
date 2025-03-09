@@ -182,3 +182,6 @@ C:\Projects\YadLeyadBack\YadLeyadBack\obj\Debug\net7.0\scopedcss\bundle\YadLeyad
 C:\Projects\YadLeyadBack\YadLeyadBack\obj\Debug\net7.0\YadLeyadBack.csproj.CopyComplete
 C:\Projects\YadLeyadBack\YadLeyadBack\obj\Debug\net7.0\YadLeyadBack.genruntimeconfig.cache
 C:\Projects\YadLeyadBack\YadLeyadBack\obj\Debug\net7.0\ref\YadLeyadBack.dll
+C:\Projects\YadLeyadBack\YadLeyadBack\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Projects\YadLeyadBack\YadLeyadBack\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+C:\Projects\YadLeyadBack\YadLeyadBack\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll

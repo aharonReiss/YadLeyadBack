@@ -54,3 +54,7 @@ C:\Users\User\Desktop\checkkk\YadLeyadBack\Appilcation\obj\Debug\net7.0\refint\A
 C:\Users\User\Desktop\checkkk\YadLeyadBack\Appilcation\obj\Debug\net7.0\Appilcation.pdb
 C:\Users\User\Desktop\checkkk\YadLeyadBack\Appilcation\obj\Debug\net7.0\Appilcation.genruntimeconfig.cache
 C:\Users\User\Desktop\checkkk\YadLeyadBack\Appilcation\obj\Debug\net7.0\ref\Appilcation.dll
+C:\Projects\YadLeyadBack\Appilcation\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Projects\YadLeyadBack\Appilcation\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Projects\YadLeyadBack\Appilcation\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+C:\Projects\YadLeyadBack\Appilcation\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll

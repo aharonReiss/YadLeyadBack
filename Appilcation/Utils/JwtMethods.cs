@@ -15,13 +15,8 @@ namespace Appilcation.Utils
         {
             try
             {
-                string accessToken = string.Empty;
-                if (token.ToString().StartsWith("Bearer"))
-                {
-                    accessToken = token.ToString().Substring("Bearer ".Length).Trim();
-                }
                 var tokenHandler = new JwtSecurityTokenHandler();
-                var securityToken = (JwtSecurityToken)tokenHandler.ReadToken(accessToken);
+                var securityToken = (JwtSecurityToken)tokenHandler.ReadToken(token);
                 var claimValue = securityToken.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
                 if (claimValue != null)
                 {

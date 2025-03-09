@@ -15,6 +15,6 @@ namespace Domain.Entities
         public int StreeId { get; set; }
         public int? AdressNumber { get; set; }
         public int? HouseNumber { get; set; }
-        public int UserId { get; set; }
+        public long UserId { get; set; }
     }
 }

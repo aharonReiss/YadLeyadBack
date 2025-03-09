@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace YadLeyadBack.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CategoriesController : ControllerBase
     {
         

@@ -154,3 +154,7 @@ C:\Users\User\Desktop\checkkk\YadLeyadBack\Infrastructure\obj\Debug\net7.0\refin
 C:\Users\User\Desktop\checkkk\YadLeyadBack\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 C:\Users\User\Desktop\checkkk\YadLeyadBack\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache
 C:\Users\User\Desktop\checkkk\YadLeyadBack\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+C:\Projects\YadLeyadBack\Infrastructure\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Projects\YadLeyadBack\Infrastructure\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Projects\YadLeyadBack\Infrastructure\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+C:\Projects\YadLeyadBack\Infrastructure\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll

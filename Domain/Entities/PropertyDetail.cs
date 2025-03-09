@@ -23,7 +23,7 @@ namespace Domain.Entities
         public int PropertySizeInMeters { get; set; }
         public int Floor { get; set; }
         public bool IsTherElevator { get; set; }
-        public long? Price { get; set; }
+        public double? Price { get; set; }
         public bool IsThereSafeRoom { get; set; }
         public bool IsFurnished { get; set; }
         public bool IsMediation { get; set; }
