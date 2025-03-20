@@ -15,5 +15,6 @@ namespace Domain.Entities
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public bool IsEnable { get; set; }
+        public int Priority { get; set; }
     }
 }

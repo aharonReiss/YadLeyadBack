@@ -40,6 +40,9 @@ namespace YadLeyadBack.Migrations
                     b.Property<bool>("IsEnable")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Priority")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("StartDate")
                         .HasColumnType("datetime2");
 
@@ -163,8 +166,8 @@ namespace YadLeyadBack.Migrations
                     b.Property<int>("StreeId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ProprtyId");
 
@@ -218,8 +221,8 @@ namespace YadLeyadBack.Migrations
                     b.Property<int>("PorchCount")
                         .HasColumnType("int");
 
-                    b.Property<long?>("Price")
-                        .HasColumnType("bigint");
+                    b.Property<double?>("Price")
+                        .HasColumnType("float");
 
                     b.Property<long>("PropertyId")
                         .HasColumnType("bigint");
