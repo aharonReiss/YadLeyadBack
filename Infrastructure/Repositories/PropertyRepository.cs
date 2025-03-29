@@ -17,18 +17,34 @@ namespace Infrastructure.Repositories
         }
         public async Task<long> AddProperty(AddPropertyModel addPropertyModel, long userId)
         {
+            int[] address = addPropertyModel.AddressCityStreet.Split('_')
+                             .Select(int.Parse)
+                             .ToArray();
             var result = _context.Properties.Add(new Domain.Entities.Property 
             { 
                 AdressNumber = 0,
-                CityId = addPropertyModel.CityId,
+                CityId = address[0],
                 HouseNumber = addPropertyModel.HouseNumber,
-                StreeId = addPropertyModel.StreetId,
+                StreeId = address[1],
                 UserId = userId
             });
             await _context.SaveChangesAsync();
             return result.Entity.ProprtyId;
         }
-
+        public async Task<bool> AddPhoneNumbers(AddPropertyModel addPropertyModel, long PropertyId)
+        {
+            var phones = addPropertyModel.PhoneNumbers.Split(";");
+;           foreach (var phone in phones)
+            {
+                _context.PhoneNumbers.Add(new Domain.Entities.PhoneNumber
+                {
+                    Phone = phone,
+                    PropertyDetailId = PropertyId
+                });
+            }
+            await _context.SaveChangesAsync();
+            return true;
+        }
         public async Task<long> AddPropertyDetail(AddPropertyModel addPropertyModel, long PropertyId)
         {
             var result = _context.PropertyDetails.Add(new Domain.Entities.PropertyDetail
@@ -48,7 +64,13 @@ namespace Infrastructure.Repositories
                 PorchCount = addPropertyModel.PorchCount,
                 Price = addPropertyModel.Price,
                 PropertyId = PropertyId,
-                PropertySizeInMeters = addPropertyModel.PropertySizeInMeters
+                PropertySizeInMeters = addPropertyModel.PropertySizeInMeters,
+                FullName = addPropertyModel.FullName,
+                HouseCommittee = addPropertyModel.HouseCommittee,
+                IsThereAirCondition = addPropertyModel.IsThereAirCondition,
+                PropertyTax = addPropertyModel.PropertyTax,
+                PropertyTypeId = addPropertyModel.PropertyTypeId,
+                PropertyConditionId = addPropertyModel.PropetyConditionId
             });
             await _context.SaveChangesAsync();
             return result.Entity.PropertyDetailId;

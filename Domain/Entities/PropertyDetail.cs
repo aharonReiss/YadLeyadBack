@@ -27,5 +27,12 @@ namespace Domain.Entities
         public bool IsThereSafeRoom { get; set; }
         public bool IsFurnished { get; set; }
         public bool IsMediation { get; set; }
+        public string FullName { get; set; }
+        public bool? IsThereAirCondition { get; set; }
+        public int? HouseCommittee { get; set; }
+        public int? PropertyTax { get; set; }
+        public int? PropertyTypeId { get; set; }
+        public int? PropertyConditionId { get; set; }
+
     }
 }

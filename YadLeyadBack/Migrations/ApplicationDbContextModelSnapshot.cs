@@ -68,6 +68,99 @@ namespace YadLeyadBack.Migrations
                     b.ToTable("Cities");
                 });
 
+            modelBuilder.Entity("Domain.Entities.FieldType", b =>
+                {
+                    b.Property<int>("FieldTypeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FieldTypeId"));
+
+                    b.Property<string>("FieldTypeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FieldTypeId");
+
+                    b.ToTable("FieldTypes");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Fields", b =>
+                {
+                    b.Property<int>("FieldId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FieldId"));
+
+                    b.Property<int>("FieldType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PlaceHolder")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("Reqired")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FieldId");
+
+                    b.ToTable("Fields");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Furniture", b =>
+                {
+                    b.Property<int>("FurnitureId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FurnitureId"));
+
+                    b.Property<string>("FurnitureDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FurnitureId");
+
+                    b.ToTable("Furniture");
+                });
+
+            modelBuilder.Entity("Domain.Entities.LevelsForCategory", b =>
+                {
+                    b.Property<int>("LevelId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LevelId"));
+
+                    b.Property<int>("CtegoryNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Fields")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LevelTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("LevelId");
+
+                    b.ToTable("LevelsForCategories");
+                });
+
             modelBuilder.Entity("Domain.Entities.Neighborhood", b =>
                 {
                     b.Property<int>("ID")
@@ -174,6 +267,23 @@ namespace YadLeyadBack.Migrations
                     b.ToTable("Properties");
                 });
 
+            modelBuilder.Entity("Domain.Entities.PropertyCondition", b =>
+                {
+                    b.Property<int>("PropertyConditionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PropertyConditionId"));
+
+                    b.Property<string>("PropertyConditionDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PropertyConditionId");
+
+                    b.ToTable("PropertyConditions");
+                });
+
             modelBuilder.Entity("Domain.Entities.PropertyDetail", b =>
                 {
                     b.Property<long>("PropertyDetailId")
@@ -183,6 +293,13 @@ namespace YadLeyadBack.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("PropertyDetailId"));
 
                     b.Property<int>("Floor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("HouseCommittee")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsFurnished")
@@ -195,6 +312,9 @@ namespace YadLeyadBack.Migrations
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsTherElevator")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("IsThereAirCondition")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsThereLandscape")
@@ -224,10 +344,19 @@ namespace YadLeyadBack.Migrations
                     b.Property<double?>("Price")
                         .HasColumnType("float");
 
+                    b.Property<int?>("PropertyConditionId")
+                        .HasColumnType("int");
+
                     b.Property<long>("PropertyId")
                         .HasColumnType("bigint");
 
                     b.Property<int>("PropertySizeInMeters")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PropertyTax")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PropertyTypeId")
                         .HasColumnType("int");
 
                     b.HasKey("PropertyDetailId");
@@ -257,6 +386,23 @@ namespace YadLeyadBack.Migrations
                     b.HasIndex("PropertyDetailId");
 
                     b.ToTable("PropertyForShabatDetails");
+                });
+
+            modelBuilder.Entity("Domain.Entities.PropertyType", b =>
+                {
+                    b.Property<int>("PropertyTypeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PropertyTypeId"));
+
+                    b.Property<string>("PropertyTypeDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PropertyTypeId");
+
+                    b.ToTable("PropertyTypes");
                 });
 
             modelBuilder.Entity("Domain.Entities.Street", b =>

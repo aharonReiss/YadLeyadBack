@@ -10,5 +10,7 @@ namespace Appilcation.Interfaces
     public interface ICategoryService
     {
         Task<List<CategoriesModelResponse>> GetCategoriesList();
+        Task<List<StepCategoriesModel>> GetStepsByCategory(int categoryNumer);
+        Task<List<OptionsModel>> GetOptionsByFieldName(string fieldName);
     }
 }

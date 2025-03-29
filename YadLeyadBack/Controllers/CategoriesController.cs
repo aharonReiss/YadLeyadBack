@@ -1,6 +1,7 @@
 ﻿using Appilcation.Interfaces;
 using Appilcation.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Models;
 
 namespace YadLeyadBack.Controllers
 {
@@ -30,6 +31,21 @@ namespace YadLeyadBack.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        
+
+        [HttpGet]
+        [Route("get-levels-by-category/{categoryNumber}")]
+        public async Task<IActionResult> GetLevelsByCategory(int categoryNumber)
+        {
+            try
+            {
+                var listCategories = await _categoryService.GetStepsByCategory(categoryNumber);
+                return Ok(listCategories);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

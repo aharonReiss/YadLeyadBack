@@ -26,6 +26,7 @@ namespace Appilcation.Services
             long userId = JwtMethods.GetUserIdFromJWT(token);
             var propertyId = await _propertyRepository.AddProperty(addPropertyModel, userId);
             await _propertyRepository.AddPropertyDetail(addPropertyModel, propertyId);
+            await _propertyRepository.AddPhoneNumbers(addPropertyModel, propertyId);
             if (addPropertyModel.CategoryType == 5)
                 await _propertyRepository.AddPropertyShabatDetails(addPropertyModel, propertyId);
             return true;

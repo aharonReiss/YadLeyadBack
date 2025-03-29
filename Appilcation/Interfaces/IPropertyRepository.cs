@@ -12,5 +12,6 @@ namespace Appilcation.Interfaces
         Task<long> AddProperty(AddPropertyModel addPropertyModel, long userId);
         Task<long> AddPropertyDetail(AddPropertyModel addPropertyModel,long PropertyId);
         Task<long> AddPropertyShabatDetails(AddPropertyModel addPropertyModel, long PropertyId);
+        Task<bool> AddPhoneNumbers(AddPropertyModel addPropertyModel, long PropertyId);
     }
 }

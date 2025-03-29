@@ -22,6 +22,12 @@ namespace Infrastructure.Repositories
         public DbSet<PhoneNumber> PhoneNumbers { get; set; }
         public DbSet<Parasha> Parashot { get; set; }
         public DbSet<PropertyForShabatDetail> PropertyForShabatDetails { get; set; }
+        public DbSet<Fields> Fields { get; set; }
+        public DbSet<FieldType> FieldTypes { get; set; }
+        public DbSet<LevelsForCategory> LevelsForCategories { get; set; }
+        public DbSet<PropertyCondition> PropertyConditions { get; set; }
+        public DbSet<PropertyType> PropertyTypes { get; set; }
+        public DbSet<Furniture> Furniture { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
       : base(options)
         {
