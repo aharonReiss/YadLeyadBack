@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Appilcation.Models
 {
-    public class CategoryStepModel
+    public class StepCategoriesModel
     {
-        public bool IsSupportMediation { get; set; }
-        public List<StepCategoriesModel> StepCategoriesModel { get; set; }
+        public string LevelTitle { get; set; }
+        public List<FieldModel> Fields { get; set; }
     }
 }

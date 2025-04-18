@@ -16,5 +16,6 @@ namespace Domain.Entities
         public DateTime? EndDate { get; set; }
         public bool IsEnable { get; set; }
         public int Priority { get; set; }
+        public bool IsSupportMediation { get; set; }
     }
 }

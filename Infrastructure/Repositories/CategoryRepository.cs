@@ -21,6 +21,10 @@ namespace Infrastructure.Repositories
         {
             return await _context.Categories.Where(c => c.IsEnable).ToListAsync();
         }
+        public async Task<Category> GetCategoryDetails(int categoryNumber)
+        {
+            return await _context.Categories.Where(c => c.CategoryId == categoryNumber).FirstOrDefaultAsync();
+        }
         public async Task<List<Fields>> GetFields()
         {
             return await _context.Fields.ToListAsync();

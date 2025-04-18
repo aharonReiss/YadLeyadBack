@@ -19,10 +19,12 @@ namespace Appilcation.Services
             _apartmentFiltersRepository = apartmentFiltersRepository;
             _categoryRepository = categoryRepository;
         }
-        public async Task<List<StepCategoriesModel>> GetStepsByCategory(int categoryNumer)
+        public async Task<CategoryStepModel> GetStepsByCategory(int categoryNumer)
         {
+            CategoryStepModel categoryStepModel = new CategoryStepModel();
             List<StepCategoriesModel> stepCategoriesModels = new List<StepCategoriesModel>();
             var categoryLevels = await _categoryRepository.GetLevelsForCategory(categoryNumer);
+            var categoryDetail = await _categoryRepository.GetCategoryDetails(categoryNumer);
             var fields = await _categoryRepository.GetFields();
             foreach(var catLevel in categoryLevels)
             {
@@ -45,7 +47,9 @@ namespace Appilcation.Services
                     Fields = fieldsPerCategory
                 });
             }
-            return stepCategoriesModels;
+            categoryStepModel.StepCategoriesModel = stepCategoriesModels;
+            categoryStepModel.IsSupportMediation = categoryDetail.IsSupportMediation;
+            return categoryStepModel;
         }
         public async Task<List<OptionsModel>> GetOptionsByFieldName(string fieldName)
         {

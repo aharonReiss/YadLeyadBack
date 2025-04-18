@@ -11,6 +11,7 @@ namespace Appilcation.Interfaces
     public interface ICategoryRepository
     {
         Task<List<Category>> GetCategoriesList();
+        Task<Category> GetCategoryDetails(int categoryNumber);
         Task<List<Fields>> GetFields();
         Task<List<LevelsForCategory>> GetLevelsForCategory(int categoryNumber);
         Task<List<OptionsModel>> GetPropertyType();
