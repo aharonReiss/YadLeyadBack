@@ -1,5 +1,6 @@
 ﻿using Appilcation.Interfaces;
 using Appilcation.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -86,6 +87,23 @@ namespace Infrastructure.Repositories
             });
             await _context.SaveChangesAsync();
             return result.Entity.PropertyForShabatDetailId;
+        }
+        public async Task<List<CityStreetAddressDto>> GetCityStreetAddressDetails(string val)
+        {
+            val = val.ToLower(); // make sure comparison is case-insensitive
+
+            var result = await (from c in _context.Cities
+                                join s in _context.Streets on c.CityID equals s.CityId
+                                where c.CityName.ToLower().Contains(val) || s.StreetName.ToLower().Contains(val)
+                                select new CityStreetAddressDto
+                                {
+                                    AddressDetail = c.CityName + " - " + s.StreetName,
+                                    AddressVal = c.CityID.ToString() + "_" + s.StreetID.ToString()
+                                })
+                                .Take(20)
+                                .ToListAsync();
+
+            return result;
         }
     }
 }

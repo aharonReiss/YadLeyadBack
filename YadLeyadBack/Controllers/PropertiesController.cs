@@ -29,5 +29,20 @@ namespace YadLeyadBack.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet]
+        [Route("address-details")]
+        public async Task<IActionResult> GetCityStreetAddressDetails([FromQuery] string val)
+        {
+            try
+            {
+                var result = await _propertyService.GetCityStreetAddressDetails(val);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

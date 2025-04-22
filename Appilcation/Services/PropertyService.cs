@@ -31,5 +31,9 @@ namespace Appilcation.Services
                 await _propertyRepository.AddPropertyShabatDetails(addPropertyModel, propertyId);
             return true;
         }
+        public async Task<List<CityStreetAddressDto>> GetCityStreetAddressDetails(string val)
+        {
+            return await _propertyRepository.GetCityStreetAddressDetails(val);
+        }
     }
 }

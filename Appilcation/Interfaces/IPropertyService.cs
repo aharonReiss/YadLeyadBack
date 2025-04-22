@@ -10,5 +10,6 @@ namespace Appilcation.Interfaces
     public interface IPropertyService
     {
         Task<bool> AddProperty(AddPropertyModel addPropertyModel);
+        Task<List<CityStreetAddressDto>> GetCityStreetAddressDetails(string val);
     }
 }
