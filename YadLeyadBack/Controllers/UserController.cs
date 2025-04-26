@@ -1,6 +1,10 @@
 ﻿using Appilcation.Interfaces;
 using Appilcation.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace YadLeyadBack.Controllers
 {
@@ -15,6 +19,44 @@ namespace YadLeyadBack.Controllers
             _userService = userService;
             _config = config;
         }
+        [HttpGet]
+        [Route("authenticate")]
+        public IActionResult Authenticate()
+        {
+            try
+            {
+                var authHeader = Request.Headers["Authorization"].FirstOrDefault();
+                if (authHeader == null || !authHeader.StartsWith("Bearer "))
+                {
+                    return Unauthorized("Missing or invalid Authorization header");
+                }
+
+                var token = authHeader.Substring("Bearer ".Length).Trim();
+
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.ASCII.GetBytes(_config["Jwt:Key"]);
+                var validationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ClockSkew = TimeSpan.Zero
+                };
+
+                tokenHandler.ValidateToken(token, validationParameters, out SecurityToken validatedToken);
+
+                var jwtToken = (JwtSecurityToken)validatedToken;
+                var userId = jwtToken.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
+
+                return Ok(new { IsAuthenticated = true, UserId = userId });
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized($"Token validation failed: {ex.Message}");
+            }
+        }
+
         [HttpPost]
         [Route("registration")]
         public async Task<IActionResult> AddUser([FromBody] RegistrationModelRequest userReq)
