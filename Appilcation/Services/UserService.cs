@@ -1,6 +1,8 @@
-﻿using Appilcation.Interfaces;
+﻿using Appilcation.DTOs;
+using Appilcation.Interfaces;
 using Appilcation.Models;
 using Appilcation.Utils;
+using AutoMapper;
 using Domain.Entities;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -16,9 +18,11 @@ namespace Appilcation.Services
         private IConfiguration _config;
         private IUserRepository _userRepository;
         private IValidationService _validationService;
+        private readonly IMapper _mapper;
 
-        public UserService(IUserRepository userRepository, IConfiguration config, IValidationService validationService)
+        public UserService(IUserRepository userRepository, IConfiguration config, IValidationService validationService,IMapper mapper)
         {
+            _mapper = mapper;
             _config = config;
             _userRepository = userRepository;
             _validationService = validationService;
@@ -59,13 +63,16 @@ namespace Appilcation.Services
             throw new Exception("יוזר לא קיים");
         }
 
-        public async Task<string> Login(LoginModelRequest user)
+        public async Task<LoginModelResponse> Login(LoginModelRequest user)
         {
             User userFromDb = await _userRepository.GetUserByEmail(user.Email);
             if (userFromDb != null && Cryptor.MD5Encrypt(user.Password) == userFromDb.Password)
             {
+                LoginModelResponse res = new LoginModelResponse();
                 string token = JwtMethods.GenerateToken(userFromDb.Id.ToString(), _config["Jwt:Issuer"], _config["Jwt:Key"]);
-                return token;
+                res.Token = token;
+                res.User = _mapper.Map<UserDTO>(userFromDb);
+                return res;
             }
             throw new Exception(SystemMessages.AuthenticationProcessFailed);
         }

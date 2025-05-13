@@ -77,7 +77,7 @@ namespace YadLeyadBack.Controllers
         {
             try
             {
-                string userAuthenticate = await _userService.Login(loginReq);
+                var userAuthenticate = await _userService.Login(loginReq);
                 return Ok(userAuthenticate);
             }
             catch (Exception ex)

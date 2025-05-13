@@ -11,7 +11,7 @@ namespace Appilcation.Interfaces
     public interface IUserService
     {
         Task<bool> AddUserAsync(RegistrationModelRequest user);
-        Task<string> Login(LoginModelRequest user);
+        Task<LoginModelResponse> Login(LoginModelRequest user);
         Task<User> GetUserByUserId(long userId);
     }
 }

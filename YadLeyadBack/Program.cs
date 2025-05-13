@@ -1,4 +1,5 @@
 using Appilcation.Interfaces;
+using Appilcation.Mappings;
 using Appilcation.Services;
 using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -26,6 +27,7 @@ builder.Services.AddControllers(options =>
 {
     options.Filters.Add<ApiResponseFilter>(); // Add global filter
 });
+builder.Services.AddAutoMapper(typeof(UserProfile));
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<IValidationService, ValidationService>();
 builder.Services.AddScoped<IUserService, UserService>();
